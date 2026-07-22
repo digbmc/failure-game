@@ -9,7 +9,39 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play failure.</tw-noscript></noscript></tw-story>
-<tw-storydata name="failure" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
+<tw-storydata name="failure" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+tw-passage h1 {
+	font-size: 2.5em;
+}
+
+/*
+tw-story {
+	color: aliceblue;
+    background-color: indigo;
+}
+*/
+
+tw-link, a {
+  color: lightgreen;
+}
+
+.visited, a:visited {
+  color: yellow;
+}
+
+@media (max-width:600px) {
+  tw-passage h1 {
+	font-size: 2em;
+ }
+  tw-passage {
+    line-height: 1.25em;
+    font-size: .75em;
+  }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
 # Welcome!
 
