@@ -1,2 +1,3 @@
-# failure-game
-Twine game for the Failure Institute (Bryn Mawr Digital Scholarship)
+# Failure Game
+
+Twine game for the [Institute of Failure](https://digitalprojects.brynmawr.edu/failure/) 
