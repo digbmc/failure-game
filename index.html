@@ -68,7 +68,54 @@ I can tell that you are really good at basketball. Let&#39;s roll the dice to se
 
 You hit 49 baskets in a row, but just as the 50th was about to go in, the snake lunged at your foot and chomped it clean off. It slowly swallowed the rest of you.
 
-[[OK|End]] ]</tw-passagedata><tw-passagedata pid="4" name="Weaving" tags="" position="725,375" size="100,100">(display:&quot;404&quot;)</tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
+[[OK|End]] ]</tw-passagedata><tw-passagedata pid="4" name="Weaving" tags="" position="725,375" size="100,100"> #Weaving 
+
+What is langauge if not weaving with words? Try and see if you can find the failure this grid has interred. 
+
+(Here&#39;s a hint: throughout this event, it&#39;s often reoccurred) 
+{(set: $selection to (a:))
+(enchant: ?checkanswer, (button:))
+(set:$wordgrid to (a:(a:&quot;U&quot;,&quot;A&quot;,&quot;E&quot;,&quot;A&quot;,&quot;U&quot;,&quot;F&quot;,&quot;U&quot;,&quot;R&quot;),
+    (a:&quot;I&quot;,&quot;E&quot;,&quot;R&quot;,&quot;U&quot;,&quot;L&quot;,&quot;I&quot;,&quot;A&quot;,&quot;F&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;I&quot;,&quot;R&quot;,&quot;I&quot;,&quot;A&quot;,&quot;U&quot;,&quot;U&quot;),
+    (a:&quot;E&quot;,&quot;F&quot;,&quot;R&quot;,&quot;F&quot;,&quot;R&quot;,&quot;A&quot;,&quot;E&quot;,&quot;F&quot;),
+    (a:&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;F&quot;,&quot;A&quot;,&quot;U&quot;,&quot;F&quot;,&quot;I&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;A&quot;,&quot;F&quot;,&quot;R&quot;,&quot;I&quot;,&quot;I&quot;,&quot;A&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;U&quot;,&quot;I&quot;,&quot;F&quot;,&quot;A&quot;,&quot;F&quot;,&quot;U&quot;),
+    (a:&quot;I&quot;,&quot;A&quot;,&quot;L&quot;,&quot;E&quot;,&quot;L&quot;,&quot;R&quot;,&quot;F&quot;,&quot;U&quot;)
+)) }
+
+(align:&quot;=&gt;&lt;=&quot;)|grid&gt;[[&lt;div class=&quot;wordgrid&quot;&gt;
+{{
+(for: each _row, ...(range:1,8))[\
+(for: each _column, ...(range:1,8))[\
+(set:_letter to $wordgrid&#39;s _row&#39;s _column)\
+(set:_coord to (a:_row,_column))\
+(set:_color to &quot;white&quot;)\
+(if:$selection contains _coord)[\
+(set:_color to &quot;orange&quot;)]\
+&lt;span&gt;(color:_color)[(link-rerun:_letter)[
+(if: $selection contains _coord)[\
+(set: $selection to $selection - (a:_coord))\
+]\
+(else:)[(set: $selection to $selection + (a:_coord))]\
+(set:$clickedRow to _row)
+(set:$clickedColumn to _column)
+(set:$coord to _coord)
+(rerun:?grid)
+]]&lt;/span&gt;\
+]
+]
+&lt;/div&gt;\
+&lt;div class=&quot;tw-passage&quot;&gt;
+|checkanswer&gt;[(link:&quot;Found it!&quot;)[(if:$selection is (a:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[You found failure!]
+(else-if:$selection is (reversed:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[you found failure!] (else-if:$selection does not contain (a:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[You failed]]]
+&lt;/div&gt;
+}}
+]
+]
+[[OK|End]] 
+</tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
 
 I can tell you&#39;re a champion in the making! 
 
