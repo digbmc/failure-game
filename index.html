@@ -80,7 +80,23 @@ You sit down on the provided stool and lift up your right arm, preparing your po
 
 [[OK|End]]
 ]
-]</tw-passagedata><tw-passagedata pid="6" name="Balancing" tags="" position="600,500" size="100,100">(display:&quot;404&quot;)</tw-passagedata><tw-passagedata pid="7" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
+]</tw-passagedata>
+<tw-passagedata pid="6" name="Balancing" tags="" position="600,500" size="100,100">(display:&quot;404&quot;)
+Try and see which is lighter, a pound of feathers or a pound of bricks! Or...at least balance out some feathers and bricks.
+
+Adjust the number of feathers and the number of bricks on the scale to balance it. 
+(set:$feathernumber to -1)(set:$bricknumber to -1)(enchant: ?weigh, (button:))
+{feathers: (link-rerun:&quot;-&quot;)[(if: $feathernumber &gt; -1)[(set:$feathernumber to it-1)](replace:?fnum)[(str:$feathernumber+1)]]      |fnum&gt;[(str:$feathernumber+1)]      (link-rerun:&quot;+&quot;)[(set:$feathernumber to it+1)(replace:?fnum)[(str:$feathernumber+1)]]}
+
+{bricks: (link-rerun:&quot;-&quot;)[(if: $bricknumber &gt; -1)[(set:$bricknumber to it-1)](replace:?bnum)[(str:$bricknumber+1)]]      |bnum&gt;[(str:$bricknumber+1)]      (link-rerun:&quot;+&quot;)[(set:$bricknumber to it+1)(replace:?bnum)[(str:$bricknumber+1)]]}
+
+|weigh&gt;[(link:&quot;weigh&quot;) [(if: $feathernumber &lt; $bricknumber) [The scale tips over, as the bricks crash to the ground and send the feathers flying. You fail.] (else-if: $feathernumber is $bricknumber) [The scale wobbles in place for a moment, looking as though it might settle, before tipping over and spilling feathers all over you. You fail.] (else-if: $feathernumber &gt; $bricknumber)[The scale tips towards the feathers, looking as though the feathers may tip the scale, but a gust of find comes through and knocks them off. The bricks come tumbling onto your big toe. You fail.]]]
+
+
+[[OK|End]] 
+</tw-passagedata>
+	
+<tw-passagedata pid="7" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
 
 I am so sorry, we ran out of discus disks! Sometimes life is like that.
 
