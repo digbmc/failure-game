@@ -41,19 +41,6 @@ tw-link, a {
     line-height: 1.25em;
     font-size: .75em;
   }
-.wordgrid {
-    display: grid;
-    grid-template-columns: repeat(8, 1.5em);
-    gap: 0.2em;
-    justify-content: center;
-    line-height: 2;
-  	border: 1px solid white;
-  	padding-right:10%;
-  	margin: 5px 
-  	letter-spacing:100%;
-  	font-family:"Courier New", Courier, monospace;
-  	font-weight:bold;
-}
 
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
@@ -100,8 +87,8 @@ What is langauge if not weaving with words? Try and see if you can find the fail
 )) }
 
 (align:&quot;=&gt;&lt;=&quot;)|grid&gt;[[&lt;div class=&quot;wordgrid&quot;style=&quot;display: grid !important;justify-content: center !important;line-height: 2em !important;padding:1em !important;letter-spacing:1em !important;
-font-family:&quot;Courier New&quot;, Courier, monospace !important;&quot;&gt;
-(for: each _row, ...(range:1,8))[\
+&gt;
+(font:&quot;Courier New&quot;)[(for: each _row, ...(range:1,8))[\
 (for: each _column, ...(range:1,8))[\
 (set:_letter to $wordgrid&#39;s _row&#39;s _column)\
 (set:_coord to (a:_row,_column))\
