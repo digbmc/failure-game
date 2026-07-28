@@ -99,8 +99,8 @@ What is langauge if not weaving with words? Try and see if you can find the fail
     (a:&quot;I&quot;,&quot;A&quot;,&quot;L&quot;,&quot;E&quot;,&quot;L&quot;,&quot;R&quot;,&quot;F&quot;,&quot;U&quot;)
 )) }
 
-(align:&quot;=&gt;&lt;=&quot;)|grid&gt;[[&lt;div class=&quot;wordgrid&quot;&gt;
-{{
+(align:&quot;=&gt;&lt;=&quot;)|grid&gt;[[&lt;div class=&quot;wordgrid&quot;style=&quot;display: grid !important;justify-content: center !important;line-height: 2em !important;padding:1em !important;letter-spacing:1em !important;
+font-family:&quot;Courier New&quot;, Courier, monospace !important;&quot;&gt;
 (for: each _row, ...(range:1,8))[\
 (for: each _column, ...(range:1,8))[\
 (set:_letter to $wordgrid&#39;s _row&#39;s _column)\
@@ -108,23 +108,22 @@ What is langauge if not weaving with words? Try and see if you can find the fail
 (set:_color to &quot;white&quot;)\
 (if:$selection contains _coord)[\
 (set:_color to &quot;orange&quot;)]\
-&lt;span&gt;(color:_color)[(link-rerun:_letter)[
+&lt;span&gt;(color:_color)[(link-rerun:_letter)[\
 (if: $selection contains _coord)[\
 (set: $selection to $selection - (a:_coord))\
 ]\
 (else:)[(set: $selection to $selection + (a:_coord))]\
-(set:$clickedRow to _row)
-(set:$clickedColumn to _column)
-(set:$coord to _coord)
-(rerun:?grid)
+(set:$clickedRow to _row)\
+(set:$clickedColumn to _column)\
+(set:$coord to _coord)\
+(rerun:?grid)\
 ]]&lt;/span&gt;\
 ]
 ]
+]
 &lt;/div&gt;\
+]
 {|checkanswer&gt;[(set:$permutations to (permutations:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))(link:&quot;Found it!&quot;)[(if:$permutations contains $selection)[That&#39;s failure](else:)[You failed]]]}
-}}
-]
-]
 [[OK|End]] 
 </tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
 
