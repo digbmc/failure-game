@@ -121,10 +121,7 @@ What is langauge if not weaving with words? Try and see if you can find the fail
 ]
 ]
 &lt;/div&gt;\
-&lt;div class=&quot;tw-passage&quot;&gt;
-|checkanswer&gt;[(link:&quot;Found it!&quot;)[(if:$selection is (a:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[You found failure!]
-(else-if:$selection is (reversed:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[you found failure!] (else-if:$selection does not contain (a:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))[You failed]]]
-&lt;/div&gt;
+{|checkanswer&gt;[(set:$permutations to (permutations:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))(link:&quot;Found it!&quot;)[(if:$permutations contains $selection)[That&#39;s failure](else:)[You failed]]]}
 }}
 ]
 ]
