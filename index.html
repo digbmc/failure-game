@@ -41,6 +41,7 @@ tw-link, a {
     line-height: 1.25em;
     font-size: .75em;
   }
+
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
 # Welcome!
@@ -68,7 +69,50 @@ I can tell that you are really good at basketball. Let&#39;s roll the dice to se
 
 You hit 49 baskets in a row, but just as the 50th was about to go in, the snake lunged at your foot and chomped it clean off. It slowly swallowed the rest of you.
 
-[[OK|End]] ]</tw-passagedata><tw-passagedata pid="4" name="Weaving" tags="" position="725,375" size="100,100">(display:&quot;404&quot;)</tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
+[[OK|End]] ]</tw-passagedata><tw-passagedata pid="4" name="Weaving" tags="" position="725,375" size="100,100"> #Weaving 
+
+What is langauge if not weaving with words? Try and see if you can find the failure this grid has interred. 
+
+(Here&#39;s a hint: throughout this event, it&#39;s often reoccurred) 
+{(set: $selection to (a:))
+(enchant: ?checkanswer, (button:))
+(set:$wordgrid to (a:(a:&quot;U&quot;,&quot;A&quot;,&quot;E&quot;,&quot;A&quot;,&quot;U&quot;,&quot;F&quot;,&quot;U&quot;,&quot;R&quot;),
+    (a:&quot;I&quot;,&quot;E&quot;,&quot;R&quot;,&quot;U&quot;,&quot;L&quot;,&quot;I&quot;,&quot;A&quot;,&quot;F&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;I&quot;,&quot;R&quot;,&quot;I&quot;,&quot;A&quot;,&quot;U&quot;,&quot;U&quot;),
+    (a:&quot;E&quot;,&quot;F&quot;,&quot;R&quot;,&quot;F&quot;,&quot;R&quot;,&quot;A&quot;,&quot;E&quot;,&quot;F&quot;),
+    (a:&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;F&quot;,&quot;A&quot;,&quot;U&quot;,&quot;F&quot;,&quot;I&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;A&quot;,&quot;F&quot;,&quot;R&quot;,&quot;I&quot;,&quot;I&quot;,&quot;A&quot;),
+    (a:&quot;R&quot;,&quot;A&quot;,&quot;U&quot;,&quot;I&quot;,&quot;F&quot;,&quot;A&quot;,&quot;F&quot;,&quot;U&quot;),
+    (a:&quot;I&quot;,&quot;A&quot;,&quot;L&quot;,&quot;E&quot;,&quot;L&quot;,&quot;R&quot;,&quot;F&quot;,&quot;U&quot;)
+)) }
+
+|grid&gt;[[&lt;div class=&quot;wordgrid&quot;style=&quot;display: grid;justify-content: center;line-height: 2em;padding:1em;letter-spacing:1em;
+&quot;&gt;
+(font:&quot;Courier New&quot;)[(for: each _row, ...(range:1,8))[\
+(for: each _column, ...(range:1,8))[\
+(set:_letter to $wordgrid&#39;s _row&#39;s _column)\
+(set:_coord to (a:_row,_column))\
+(set:_color to &quot;white&quot;)\
+(if:$selection contains _coord)[\
+(set:_color to &quot;orange&quot;)]\
+&lt;span&gt;(color:_color)[(link-rerun:_letter)[\
+(if: $selection contains _coord)[\
+(set: $selection to $selection - (a:_coord))\
+]\
+(else:)[(set: $selection to $selection + (a:_coord))]\
+(set:$clickedRow to _row)\
+(set:$clickedColumn to _column)\
+(set:$coord to _coord)\
+(rerun:?grid)\
+]]&lt;/span&gt;\
+]
+]
+]
+&lt;/div&gt;\
+]]
+{|checkanswer&gt;[(set:$permutations to (permutations:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))(link:&quot;Found it!&quot;)[(if:$permutations contains $selection)[That&#39;s failure](else:)[You failed]]]}
+[[OK|End]] 
+</tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
 
 I can tell you&#39;re a champion in the making! 
 
@@ -80,7 +124,23 @@ You sit down on the provided stool and lift up your right arm, preparing your po
 
 [[OK|End]]
 ]
-]</tw-passagedata><tw-passagedata pid="6" name="Balancing" tags="" position="600,500" size="100,100">(display:&quot;404&quot;)</tw-passagedata><tw-passagedata pid="7" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
+]</tw-passagedata>
+<tw-passagedata pid="6" name="Balancing" tags="" position="600,500" size="100,100">
+Try and see which is lighter, a pound of feathers or a pound of bricks! Or...at least balance out some feathers and bricks.
+
+Adjust the number of feathers and the number of bricks on the scale to balance it. 
+(set:$feathernumber to -1)(set:$bricknumber to -1)(enchant: ?weigh, (button:))
+{feathers: (link-rerun:&quot;-&quot;)[(if: $feathernumber &gt; -1)[(set:$feathernumber to it-1)](replace:?fnum)[(str:$feathernumber+1)]]      |fnum&gt;[(str:$feathernumber+1)]      (link-rerun:&quot;+&quot;)[(set:$feathernumber to it+1)(replace:?fnum)[(str:$feathernumber+1)]]}
+
+{bricks: (link-rerun:&quot;-&quot;)[(if: $bricknumber &gt; -1)[(set:$bricknumber to it-1)](replace:?bnum)[(str:$bricknumber+1)]]      |bnum&gt;[(str:$bricknumber+1)]      (link-rerun:&quot;+&quot;)[(set:$bricknumber to it+1)(replace:?bnum)[(str:$bricknumber+1)]]}
+
+|weigh&gt;[(link:&quot;weigh&quot;) [(if: $feathernumber &lt; $bricknumber) [The scale tips over, as the bricks crash to the ground and send the feathers flying. You fail.] (else-if: $feathernumber is $bricknumber) [The scale wobbles in place for a moment, looking as though it might settle, before tipping over and spilling feathers all over you. You fail.] (else-if: $feathernumber &gt; $bricknumber)[The scale tips towards the feathers, looking as though the feathers may tip the scale, but a gust of find comes through and knocks them off. The bricks come tumbling onto your big toe. You fail.]]]
+
+
+[[OK|End]] 
+</tw-passagedata>
+	
+<tw-passagedata pid="7" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
 
 I am so sorry, we ran out of discus disks! Sometimes life is like that.
 
