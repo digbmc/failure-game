@@ -42,7 +42,7 @@ tw-link, a {
     font-size: .75em;
   }
 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
 # Welcome!
 
@@ -53,15 +53,7 @@ tw-link, a {
 3. [[Arm-wrestling]]
 4. [[Balancing]]
 5. [[Discus]]
-6. [[Sprint]]</tw-passagedata><tw-passagedata pid="2" name="End" tags="" position="725,250" size="100,100">(enchant:?page,(bg:red)) 
-
-(set: $message to (either: &quot;Better luck next time!&quot;, &quot;Well, at least you tried!&quot;, &quot;You lost, but it&#39;s just a game!&quot;, &quot;Everyone fails sometimes.&quot;, &quot;That&#39;s a bummer.&quot;))
-
-# $message
-
-You did not win.
-
-[[Play again?|Home]]</tw-passagedata><tw-passagedata pid="3" name="Basketball" tags="" position="600,375" size="100,100"># Basketball
+6. [[Sprint]]</tw-passagedata><tw-passagedata pid="2" name="Basketball" tags="" position="600,375" size="100,100"># Basketball
 
 I can tell that you are really good at basketball. Let&#39;s roll the dice to see whether you are able to score any points!
 
@@ -69,7 +61,7 @@ I can tell that you are really good at basketball. Let&#39;s roll the dice to se
 
 You hit 49 baskets in a row, but just as the 50th was about to go in, the snake lunged at your foot and chomped it clean off. It slowly swallowed the rest of you.
 
-[[OK|End]] ]</tw-passagedata><tw-passagedata pid="4" name="Weaving" tags="" position="725,375" size="100,100"> #Weaving 
+[[OK|End]] ]</tw-passagedata><tw-passagedata pid="3" name="Weaving" tags="" position="725,375" size="100,100"> #Weaving 
 
 What is langauge if not weaving with words? Try and see if you can find the failure this grid has interred. 
 
@@ -112,7 +104,7 @@ What is langauge if not weaving with words? Try and see if you can find the fail
 ]]
 {|checkanswer&gt;[(set:$permutations to (permutations:(a:2,2),(a:2,3),(a:2,4),(a:2,5),(a:2,6),(a:2,7),(a:2,8)))(link:&quot;Found it!&quot;)[(if:$permutations contains $selection)[That&#39;s failure](else:)[You failed]]]}
 [[OK|End]] 
-</tw-passagedata><tw-passagedata pid="5" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
+</tw-passagedata><tw-passagedata pid="4" name="Arm-wrestling" tags="" position="475,375" size="100,100"># Arm-wrestling
 
 I can tell you&#39;re a champion in the making! 
 
@@ -124,8 +116,7 @@ You sit down on the provided stool and lift up your right arm, preparing your po
 
 [[OK|End]]
 ]
-]</tw-passagedata>
-<tw-passagedata pid="6" name="Balancing" tags="" position="600,500" size="100,100">
+]</tw-passagedata><tw-passagedata pid="5" name="Balancing" tags="" position="600,500" size="100,100">
 Try and see which is lighter, a pound of feathers or a pound of bricks! Or...at least balance out some feathers and bricks.
 
 Adjust the number of feathers and the number of bricks on the scale to balance it. 
@@ -138,19 +129,17 @@ Adjust the number of feathers and the number of bricks on the scale to balance i
 
 
 [[OK|End]] 
-</tw-passagedata>
-	
-<tw-passagedata pid="7" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
+</tw-passagedata><tw-passagedata pid="6" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
 
 I am so sorry, we ran out of discus disks! Sometimes life is like that.
 
-[[OK|End]]</tw-passagedata><tw-passagedata pid="8" name="Sprint" tags="" position="475,500" size="100,100">(display:&quot;404&quot;)
+[[OK|End]]</tw-passagedata><tw-passagedata pid="7" name="Sprint" tags="" position="475,500" size="100,100">(display:&quot;404&quot;)
 
-</tw-passagedata><tw-passagedata pid="9" name="404" tags="" position="475,625" size="100,100"># 404 Not Found
+</tw-passagedata><tw-passagedata pid="8" name="404" tags="" position="475,625" size="100,100"># 404 Not Found
 
 Sorry, this page does not exist.
 
-(after:2s)[(go-to:&quot;End&quot;)]</tw-passagedata><tw-passagedata pid="10" name="Untitled Passage" tags="" position="600,700" size="100,100">Ordered list:
+(after:2s)[(go-to:&quot;End&quot;)]</tw-passagedata><tw-passagedata pid="9" name="samples" tags="" position="600,700" size="100,100">Ordered list:
 
 0. fRist item
 0. Second item
@@ -172,7 +161,21 @@ it is magenta]]
 
 (link:&quot;Your face is turning red&quot;)[(enchant:?page, (bg:red))]`
 
-(text-color: #cce6ff)[This is a hex value color]</tw-passagedata></tw-storydata>
+(text-color: #cce6ff)[This is a hex value color]</tw-passagedata><tw-passagedata pid="10" name="header" tags="header" position="725,675" size="100,100">(set: $logo to &#39;&lt;img src=&quot;https://digbmc.github.io/failure-game/media/IoF-favicon.svg&quot; width=&quot;30&quot;&gt;&#39;)
+(align:&quot;==&gt;&quot;)+(box:&quot;X&quot;)[(link-reveal: $logo)[ The Institute of Failure ]]
+
+</tw-passagedata><tw-passagedata pid="11" name="End" tags="" position="725,250" size="100,100">(enchant:?page,(background: &quot;#d2232a&quot;))
+
+(set: $message to (either: &quot;Better luck next time!&quot;, &quot;Well, at least you tried!&quot;, &quot;You lost, but it&#39;s just a game!&quot;, &quot;Everyone fails sometimes.&quot;, &quot;That&#39;s a bummer.&quot;))
+
+# $message
+
+You did not win.
+
+[[Play again?|Home]]
+
+(set: $wordmark to &quot;&lt;img src=&#39;https://digbmc.github.io/failure-game/media/IoF-logo.svg&#39; width=&#39;125&#39;&gt;&quot;)
+$wordmark</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
