@@ -40,11 +40,11 @@ tw-link, a {
 .image-container{
   position: relative;
   width: 100%;
-}
-.image-container img{
-  width: 100%;         
-  height: auto;
-  display: block;
+  min-height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/digbmc/failure-game/refs/heads/annika-additions/media/snake.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 .overlay-text {
   position: absolute;
@@ -57,8 +57,7 @@ tw-passage {
     font-size: .75em;
   }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100"><div class="image-container">(set:$snake to '<img src="https://raw.githubusercontent.com/digbmc/failure-game/refs/heads/annika-additions/media/snake.svg">')
-(print: $snake)
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100"><div class="image-container">
 <div class="overlay-text">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
 # Welcome!
