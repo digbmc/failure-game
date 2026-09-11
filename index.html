@@ -33,10 +33,6 @@ tw-link, a {
   color: yellow;
 }
 
-@media (max-width:600px) {
-  tw-passage h1 {
-	font-size: 2em;
- }
 .image-container {
   position: relative;
   width: 100%;
@@ -59,7 +55,11 @@ tw-passage {
     line-height: 1.25em;
     font-size: .75em;
   }
-
+@media (max-width:600px) {
+  tw-passage h1 {
+	font-size: 2em;
+ }
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100"><div class="image-container"><div class="overlay-text">
 	(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points.])]
 
