@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play failure.</tw-noscript></noscript></tw-story>
-<tw-storydata name="failure" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-storydata name="failure" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
   font-family: Tahoma, Verdana, Helvetica, sans-serif;
   font-size: 1em;
 }
@@ -17,6 +17,12 @@
 tw-passage h1 {
 	font-size: 2.5em;
 }
+
+.line-space {
+  line-height: .5rem; 
+}
+
+
 
 /*
 tw-story {
@@ -54,11 +60,9 @@ tw-link, a {
 4. [[Balancing]]
 5. [[Discus]]
 6. [[Sprint]]
-7. [[Concentration]]
-8. [[Jump]]
-
+7. [[Concentration]] 
+8. [[ Jump ]]
 </tw-passagedata><tw-passagedata pid="2" name="Basketball" tags="" position="600,375" size="100,100"># Basketball
-
 
 I can tell that you are really good at basketball. Let&#39;s roll the dice to see whether you are able to score any points!
 
@@ -66,7 +70,7 @@ I can tell that you are really good at basketball. Let&#39;s roll the dice to se
 
 You hit 49 baskets in a row, but just as the 50th was about to go in, the snake lunged at your foot and chomped it clean off. It slowly swallowed the rest of you.
 
-[[OK|End]] ]</tw-passagedata><tw-passagedata pid="3" name="Weaving" tags="" position="725,375" size="100,100"> #Weaving 
+[[OK|End]] ]</tw-passagedata><tw-passagedata pid="3" name="Weaving" tags="" position="775,700" size="100,100"> #Weaving 
 
 What is langauge if not weaving with words? Try and see if you can find the failure this grid has interred. 
 
@@ -134,17 +138,17 @@ Adjust the number of feathers and the number of bricks on the scale to balance i
 
 
 [[OK|End]] 
-</tw-passagedata><tw-passagedata pid="6" name="Discus" tags="" position="725,500" size="100,100"># Ooops!
+</tw-passagedata><tw-passagedata pid="6" name="Discus" tags="" position="925,675" size="100,100"># Ooops!
 
 I am so sorry, we ran out of discus disks! Sometimes life is like that.
 
 [[OK|End]]</tw-passagedata><tw-passagedata pid="7" name="Sprint" tags="" position="475,500" size="100,100">(display:&quot;404&quot;)
 
-</tw-passagedata><tw-passagedata pid="8" name="404" tags="" position="475,625" size="100,100"># 404 Not Found
+</tw-passagedata><tw-passagedata pid="8" name="404" tags="" position="450,875" size="100,100"># 404 Not Found
 
 Sorry, this page does not exist.
 
-(after:2s)[(go-to:&quot;End&quot;)]</tw-passagedata><tw-passagedata pid="9" name="samples" tags="" position="600,700" size="100,100">Ordered list:
+(after:2s)[(go-to:&quot;End&quot;)]</tw-passagedata><tw-passagedata pid="9" name="samples" tags="" position="600,900" size="100,100">Ordered list:
 
 0. fRist item
 0. Second item
@@ -166,7 +170,7 @@ it is magenta]]
 
 (link:&quot;Your face is turning red&quot;)[(enchant:?page, (bg:red))]`
 
-(text-color: #cce6ff)[This is a hex value color]</tw-passagedata><tw-passagedata pid="10" name="header" tags="header" position="725,675" size="100,100">(set: $logo to &#39;&lt;img src=&quot;https://digbmc.github.io/failure-game/media/IoF-favicon.svg&quot; width=&quot;30&quot;&gt;&#39;)
+(text-color: #cce6ff)[This is a hex value color]</tw-passagedata><tw-passagedata pid="10" name="header" tags="header" position="725,875" size="100,100">(set: $logo to &#39;&lt;img src=&quot;https://digbmc.github.io/failure-game/media/IoF-favicon.svg&quot; width=&quot;30&quot;&gt;&#39;)
 (align:&quot;==&gt;&quot;)+(box:&quot;X&quot;)[(link-reveal: $logo)[ The Institute of Failure ]]
 
 </tw-passagedata><tw-passagedata pid="11" name="End" tags="" position="725,250" size="100,100">(enchant:?page,(background: &quot;#d2232a&quot;))
@@ -181,7 +185,7 @@ You did not win.
 
 (set: $wordmark to &quot;&lt;img src=&#39;https://digbmc.github.io/failure-game/media/IoF-logo.svg&#39; style=&#39;background-color:white;max-width:300px&#39; alt=&#39;Institute of Failure&#39;&gt;&quot;)
 &lt;div&gt;$wordmark&lt;/div&gt;
-(text-color:white)[(link:&quot;Learn more about the Institute of Failure&quot;)[(goto-url:&quot;https://digitalprojects.brynmawr.edu/failure/&quot;)]]</tw-passagedata><tw-passagedata pid="12" name="Concentration game" tags="" position="875,500" size="100,100">(enchant:?submit, (button:))
+(text-color:white)[(link:&quot;Learn more about the Institute of Failure&quot;)[(goto-url:&quot;https://digitalprojects.brynmawr.edu/failure/&quot;)]]</tw-passagedata><tw-passagedata pid="12" name="Concentration game" tags="" position="875,875" size="100,100">(enchant:?submit, (button:))
 (set: $answer to &quot;&quot;)
 {|game&gt;[
 (set: $memory to &quot;&quot;)
@@ -205,8 +209,8 @@ You did not win.
 ]]]]
 }
 
-</tw-passagedata><tw-passagedata pid="13" name="Concentration" tags="" position="875,375" size="100,100">(set: $round to 1)
-(go-to: &quot;Concentration game&quot;)</tw-passagedata><tw-passagedata pid="14" name="false round" tags="" position="875,625" size="100,100">(enchant:?submit, (button:))
+</tw-passagedata><tw-passagedata pid="13" name="Concentration" tags="" position="1050,300" size="100,100">(set: $round to 1)
+(go-to: &quot;Concentration game&quot;)</tw-passagedata><tw-passagedata pid="14" name="false round" tags="" position="1150,625" size="100,100">(enchant:?submit, (button:))
 (set: $answer to &quot;&quot;)
 {|game&gt;[
 (set: $memory to &quot;&quot;)
@@ -229,12 +233,9 @@ You did not win.
 }
 
 (after:time+10s)[[[OK|End]]]
+</tw-passagedata><tw-passagedata pid="15" name=" Jump " tags="" position="150,425" size="100,100">#Jump
 
-	
-</tw-passagedata></tw-storydata>
-
-
-<tw-storydata> <tw-passagedata pid="8" name="Untitled Passage" tags="" position="350,250" size="100,100">You find yourself getting ready jump at your track meet
+You&#39;re at the finals for the track meet competition. You step up - 
 
 1...
 2...
@@ -245,39 +246,109 @@ You did not win.
 \(set: _style to (text-style:&quot;buoy&quot;), $word to &quot;GO&quot;)(enchant:$word, _style)\
 
 
-Do you
+The airhorn goes off! Do you...
+
 [[Race forward]]
-[[Hesistate to move]] </tw-passagedata>
-	
-	<tw-passagedata pid="9" name="Race forward" tags="" position="275,400" size="100,100">As you race forward, you find yourself pushing off with each step. If you focus on hopping on each step, focusing on the takeoff.
+[[Hesistate to move]] </tw-passagedata><tw-passagedata pid="16" name="Race forward" tags="" position="100,525" size="100,100">(text-rotate-z:355)[You lean forward and start running.]
+&lt;br&gt;
 
-You put the rest of your body into action, your arms swinging at your sides, and sweat beginning to form on your brow. 
+[You focus on each step, [putting power into your takeoff.]&lt;c1| ]
 
-You approach the edge and...
+[]&lt;c5|
+(click: ?c1)[(replace:?c5)[You definitely almost sprain your ankle]]
+
+(align:&quot;&lt;==&quot;)[Your arms begin to swing at your side and sweat begins to form on your brow. ]
+
+(align:&quot;&lt;==&quot;)[You approach the edge and...]
 
 [[Run faster and launch yourself in the air]]
 [[Slow down to have more control over your jump ]]
-</tw-passagedata><tw-passagedata pid="10" name="Hesistate to move" tags="" position="475,325" size="100,100">You hesistate to start running and the snake catches up with you and bites your ankle [[[OK|End]]]
-
-</tw-passagedata><tw-passagedata pid="11" name="Run faster and launch yourself in the air" tags="" position="275,550" size="100,100">You lean forward as you get closer to the first obstacle, using legs well use to training, to leap cleanly over the edge of the running strip, launching left foot first and stabilizing with your right. You use the momentum from clearance to continue propelling yourself forward, stretching the rest of your body forward before you hit stand.
 
 
-As you stand up, the referee sees and marks where you landed
+</tw-passagedata><tw-passagedata pid="17" name="Hesistate to move" tags="" position="225,525" size="100,100">(text-rotate-z:356)[Despite all the hard work and training you&#39;ve put in up to this point, you hesistate to start running. The snake catches up to you and bites your ankle.
+]
 
-You
+
+[[OK|End]] </tw-passagedata><tw-passagedata pid="18" name="Run faster and launch yourself in the air" tags="" position="75,700" size="100,100">#Jump
+
+&lt;div class=&quot;line-space&quot;&gt;
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 1s)[ (stop:)What brought you to this moment?]}] 
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 2s)[ (stop:)Was it the hours of training?]}]
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 3s)[ (stop:)Was it you pushing past your own limits?]}]
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 4s)[ (stop:) Will these factors cause you to succeed? ]}]
+{(live: 5s)[(stop:)
+
+ &lt;br&gt; &lt;br&gt;
+&lt;br&gt; 
+You hit the sand with both feet under you. ]}
+{(live: 6s) [(stop:) 
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+ The referee marks  the spot where you landed. ]}
+{(live: 7s) [(stop:) 
+
+&lt;br&gt;
+&lt;br&gt;
+
 [[Check to see the scoreboard]]
+
+&lt;br&gt;
+&lt;br&gt; 
 [[Walk off without checking]]
-</tw-passagedata><tw-passagedata pid="12" name="Slow down to have more control over your jump " tags="" position="475,450" size="100,100">As you slow down to make your jump, you end up tripping over your shoe laces and faceplant into the sand</tw-passagedata><tw-passagedata pid="13" name="Check to see the scoreboard" tags="" position="175,675" size="100,100">You see that despite the efforts you had put into your flight, the steps you had stepped over the course of the last few months, the weights that you had lifted to loosen your stride, and the repeated structures you had put into your bodies efforts, you see a big sign that says
 
-2nd Place
+]
+}
 
-You failed(?)  [[[OK|End]]]
-</tw-passagedata><tw-passagedata pid="14" name="Walk off without checking" tags="" position="375,675" size="100,100">You walk away from this opportunity without checking your ranking - what is it you know, that what you see up there will hold no weight with you.
-	[[[OK|End]]]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Slow down to have more control over your jump " tags="" position="150,625" size="100,100">(text-rotate-x:21)[As you slow down to make your jump, you end up tripping over your shoe laces and faceplant into the sand]
 
-You failed(?)</tw-passagedata></tw-storydata>
+[[OK|End]] </tw-passagedata><tw-passagedata pid="20" name="Check to see the scoreboard" tags="" position="50,800" size="100,100">You look up and see it...
 
+
+[{(live: 1s)[ (stop:)(t8n:&#39;slide-up&#39;)+(text-rotate-x:25)(dialog:&quot;2ND PLACE!&quot;)]}] 
+
+
+[{(live: 3s)[ (stop:) You failed  ]}]
+
+[[OK|End]] </tw-passagedata><tw-passagedata pid="21" name="Walk off without checking" tags="" position="150,850" size="100,100">
+#Jump
+(set: $jumpend1Text to &quot;
+You walk away from the competition without checking your ranking. 
+
+You never found out if you won the first place position. 
+
+You failed&quot;)
+
+(display: &quot;Jump End 1&quot;)
+
+
+[[OK|End]] </tw-passagedata><tw-passagedata pid="22" name="Jump End 1" tags="" position="150,975" size="100,100">
+
+{
+	&lt;!-- variable to track the position within the string --&gt;
+	(set: $jumpend1Pos to 1)
 	
+	&lt;!-- hook to hold the typed text --&gt;
+	|jumpend1Output&gt;[]
+	
+	&lt;!-- delay 0.2 seconds per loop --&gt;
+	(live: 2ms)[
+
+		&lt;!-- next character to the hook --&gt;
+		(append: ?jumpend1Output)[(print: $jumpend1Text&#39;s $jumpend1Pos)]
+		
+		&lt;!-- Update the position --&gt;
+		(set: $jumpend1Pos to it + 1)
+		
+		&lt;!-- stop --&gt;
+		(if: $jumpend1Pos is $jumpend1Text&#39;s length + 1)[
+			(stop:)
+		]
+	]
+}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
