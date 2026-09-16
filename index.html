@@ -19,7 +19,7 @@ tw-passage h1 {
 }
 
 .line-space {
-  line-height: 2rem; 
+  line-height: .5rem; 
 }
 
 
@@ -235,7 +235,7 @@ You did not win.
 (after:time+10s)[[[OK|End]]]
 </tw-passagedata><tw-passagedata pid="15" name=" Jump " tags="" position="150,425" size="100,100">#Jump
 
-You&#39;re at the finals for the track meet competition. You aim to get first place. You step up - 
+You&#39;re at the finals for the track meet competition. You step up - 
 
 1...
 2...
@@ -249,33 +249,46 @@ You&#39;re at the finals for the track meet competition. You aim to get first pl
 The airhorn goes off! Do you...
 
 [[Race forward]]
-[[Hesistate to move]] </tw-passagedata><tw-passagedata pid="16" name="Race forward" tags="" position="100,525" size="100,100">(align:&quot;&lt;==&quot;)[You lean forward and start running.]
+[[Hesistate to move]] </tw-passagedata><tw-passagedata pid="16" name="Race forward" tags="" position="100,525" size="100,100">(text-rotate-z:355)[You lean forward and start running.]
+&lt;br&gt;
 
-(align:&quot;&lt;==&quot;)+(box:&quot;====XXX===&quot;)[You focus on each step, putting power into your takeoff.]
+[You focus on each step, [putting power into your takeoff.]&lt;c1| ]
 
-(align:&quot;&lt;==&quot;)+(box:&quot;===XXXXX=========&quot;)[Your arms begin to swing at your side and sweat begins to form on your brow. ]
+[]&lt;c5|
+(click: ?c1)[(replace:?c5)[You definitely almost sprain your ankle]]
 
-(align:&quot;&lt;==&quot;)+(box:&quot;===========XXXXXXXXXX=======&quot;)[You approach the edge and...]
+(align:&quot;&lt;==&quot;)[Your arms begin to swing at your side and sweat begins to form on your brow. ]
+
+(align:&quot;&lt;==&quot;)[You approach the edge and...]
 
 [[Run faster and launch yourself in the air]]
 [[Slow down to have more control over your jump ]]
+
+
 </tw-passagedata><tw-passagedata pid="17" name="Hesistate to move" tags="" position="225,525" size="100,100">(text-rotate-z:356)[Despite all the hard work and training you&#39;ve put in up to this point, you hesistate to start running. The snake catches up to you and bites your ankle.
 ]
 
 
-[[OK|End]] </tw-passagedata><tw-passagedata pid="18" name="Run faster and launch yourself in the air" tags="" position="25,625" size="100,100">#Jump
+[[OK|End]] </tw-passagedata><tw-passagedata pid="18" name="Run faster and launch yourself in the air" tags="" position="75,700" size="100,100">#Jump
 
 &lt;div class=&quot;line-space&quot;&gt;
 (align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 1s)[ (stop:)What brought you to this moment?]}] 
-(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 3s)[ (stop:)Was it the hours of training?]}]
-(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 5s)[ (stop:)Was it pushing past your limits?]}]
-(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 7s)[ (stop:) Will these things cause you to succeed? ]}]
-{(live: 9s)[(stop:)
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 2s)[ (stop:)Was it the hours of training?]}]
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 3s)[ (stop:)Was it you pushing past your own limits?]}]
+(align:&quot;==&gt;&lt;=&quot;)+(box:&quot;=XXX=&quot;)[{(live: 4s)[ (stop:) Will these factors cause you to succeed? ]}]
+{(live: 5s)[(stop:)
 
  &lt;br&gt; &lt;br&gt;
 &lt;br&gt; 
-You hit the sand with both feet under you, and the referee marks where you landed ]}
-{(live: 11s) [(stop:) 
+You hit the sand with both feet under you. ]}
+{(live: 6s) [(stop:) 
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+ The referee marks  the spot where you landed. ]}
+{(live: 7s) [(stop:) 
 
 &lt;br&gt;
 &lt;br&gt;
@@ -292,7 +305,7 @@ You hit the sand with both feet under you, and the referee marks where you lande
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="19" name="Slow down to have more control over your jump " tags="" position="150,625" size="100,100">(text-rotate-x:21)[As you slow down to make your jump, you end up tripping over your shoe laces and faceplant into the sand]
 
-[[OK|End]] </tw-passagedata><tw-passagedata pid="20" name="Check to see the scoreboard" tags="" position="0,725" size="100,100">You look up and see it...
+[[OK|End]] </tw-passagedata><tw-passagedata pid="20" name="Check to see the scoreboard" tags="" position="50,800" size="100,100">You look up and see it...
 
 
 [{(live: 1s)[ (stop:)(t8n:&#39;slide-up&#39;)+(text-rotate-x:25)(dialog:&quot;2ND PLACE!&quot;)]}] 
@@ -300,7 +313,7 @@ You hit the sand with both feet under you, and the referee marks where you lande
 
 [{(live: 3s)[ (stop:) You failed  ]}]
 
-[[OK|End]] </tw-passagedata><tw-passagedata pid="21" name="Walk off without checking" tags="" position="100,775" size="100,100">
+[[OK|End]] </tw-passagedata><tw-passagedata pid="21" name="Walk off without checking" tags="" position="150,850" size="100,100">
 #Jump
 (set: $jumpend1Text to &quot;
 You walk away from the competition without checking your ranking. 
@@ -312,7 +325,7 @@ You failed&quot;)
 (display: &quot;Jump End 1&quot;)
 
 
-[[OK|End]] </tw-passagedata><tw-passagedata pid="22" name="Jump End 1" tags="" position="100,900" size="100,100">
+[[OK|End]] </tw-passagedata><tw-passagedata pid="22" name="Jump End 1" tags="" position="150,975" size="100,100">
 
 {
 	&lt;!-- variable to track the position within the string --&gt;
