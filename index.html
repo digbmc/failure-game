@@ -237,6 +237,71 @@ You did not win.
 }
 
 (after:time+10s)[[[OK|End]]]
+</tw-passagedata><tw-passagedata pid="15" name="Dodgeball game" tags="" position="1050,250" size="100,100">|game&gt;[{(set:$ball to (either:&quot;left&quot;,&quot;right&quot;))
+(set:$answer to &quot;&quot;)
+(set: $row to 0)
+(set: $started to false)}
+|openingmessage&gt;[The game is simple. Dodge four balls and you win! The game starts now...choose fast!]
+|status&gt;[]
+{
+|buttons&gt;[[(link-rerun:&quot;left&quot;)[
+	(set:$started to true)
+	(set:$answer to &quot;left&quot;)
+	(show:?status)
+	(replace:?status)[
+		&lt;div class=&quot;dodgeball-left&quot;&gt;
+			I
+		&lt;/div&gt;
+	]
+    (hide:?buttons)
+]
+
+(link-rerun:&quot;right&quot;)[
+	(set:$started to true)
+	(set:$answer to &quot;right&quot;)
+	(show:?status)
+	(replace:?status)[
+		&lt;div class=&quot;dodgeball-right&quot;&gt;
+			I
+		&lt;/div&gt;
+	]
+    (hide:?buttons)
+]]]
+|message&gt;[]
+
+(after:time+5s)[(if:$started is true)[(if:$ball is $answer)[(replace:?message)[you fail]]
+(else-if:$ball is not $answer)[(replace:?message)[you succeed...for now]]
+[(after:time+10s)[(hide:?message)]]]]
+
+(after:5s) + (live:0.5s)[(if:$started is true)[
+(set: $row to $row+1)
+(for:each _item, ...(range:1,$row))[&lt;br&gt;]
+	(if:$ball is &quot;left&quot;)[(text-style:&quot;buoy&quot;) + (align:&quot;&lt;===&quot;)[o]]
+	(else-if:$ball is &quot;right&quot;)[(text-style:&quot;buoy&quot;) + (align:&quot;====&gt;&quot;)[o]] (if: $row is 10)[(stop:)]
+]]}]
+
+(after: 10s)[(if: $round &lt;3)+(if:$started is true)[(set: $round to $round + 1)(go-to:&quot;Dodgeball game&quot;)]]
+
+(if:$round is 3)[(hide:?openingmessage)(hide:?buttons)(print: &quot;well...you managed to make it this far...too bad that&#39;s all the rounds we have!&quot;)
+[[End]]]</tw-passagedata><tw-passagedata pid="16" name="Easter Egg" tags="" position="1150,400" size="100,100">Welcome...
+
+|opening&gt;[(after:4s)[(link: &quot;would you like to see more?&quot;)[You&#39;ve fought many battles to get here...failed in many games...or perhaps this is where you started? However you came to this place, welcome. We have one more challange in store for you.]]
+
+(after:10s)[(link:&quot;what is this place?&quot;)
+[This is just another game, like any other. Just one more stop on your journey not to get eaten by that giant snake...or had you forgotten about it already?]
+
+(link:&quot;what challange?&quot;)
+[You&#39;ll see soon enough. Patience is needed in the face of failure...]]]
+
+(after:25s)[(hide:?opening)]
+
+(after:30s)[How many times have you failed here today? (input: bind _answer)(after: time + 5s)[Well. _answer certainly is a lot.]]
+
+(after: 37s)[Want to see [[what&#39;s next]]?]
+
+</tw-passagedata><tw-passagedata pid="17" name="Dodgeball" tags="" position="1050,125" size="100,100">(set: $round to 1)
+(go-to: &quot;Dodgeball game&quot;)</tw-passagedata><tw-passagedata pid="18" name="what&#39;s next" tags="" position="1150,525" size="100,100">You really thought there was a secret game? Well, I&#39;m sorry for leading you on. Unfortunately, you&#39;ll have to just keep on failing. Ready to try again?
+[[End]]</tw-passagedata>
 </tw-passagedata><tw-passagedata pid="20" name=" Jump " tags="" position="150,425" size="100,100">#Jump
 
 You&#39;re at the finals for the track meet competition. You step up - 
