@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Failure Follies.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Failure Follies" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://use.typekit.net/mxo0lic.css");
+<tw-storydata name="Failure Follies" startnode="27" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="5CC83D02-3627-4CA7-AF86-8C1C8D962975" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://use.typekit.net/mxo0lic.css");
 
 tw-passage {
   font-family: "scandia-web", Tahoma, Verdana, Helvetica, sans-serif;
@@ -77,13 +77,21 @@ tw-link, a {
 
 
 1. [[Concentration]] 
+
 2. [[Weaving]]
+
 3. [[Arm-wrestling]]
+
 4. [[Dodgeball]]
+
 5. [[Jump]]
+
 6. [[Balancing]]
+
 7. [[Discus]]
+
 8. [[Sprint]]
+
 9. [[Basketball]]
 
 </tw-passagedata><tw-passagedata pid="2" name="Basketball" tags="" position="600,375" size="100,100"># Basketball
@@ -195,7 +203,7 @@ it is magenta]]
 (link:&quot;Your face is turning red&quot;)[(enchant:?page, (bg:red))]`
 
 (text-color: #cce6ff)[This is a hex value color]</tw-passagedata><tw-passagedata pid="10" name="header" tags="header" position="725,875" size="100,100">(set: $logo to &#39;&lt;img src=&quot;https://digbmc.github.io/failure-game/media/IoF-favicon.svg&quot; width=&quot;30&quot;&gt;&#39;)
-(align:&quot;==&gt;&quot;)+(box:&quot;X&quot;)[(link-reveal: $logo)[ The Institute of Failure 
+(align:&quot;==&gt;&quot;)+(box:&quot;X&quot;)[(link-reveal: $logo)[ [[The Failure Follies|About]]
 [[Start|Home]] 
 (link-reveal: &quot;???&quot;)[(go-to: &quot;Easter Egg&quot;)] ]]
 </tw-passagedata><tw-passagedata pid="11" name="End" tags="" position="725,250" size="100,100">(enchant:?page,(background: &quot;#d2232a&quot;))
@@ -437,7 +445,18 @@ You failed&quot;)
 			(stop:)
 		]
 	]
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="27" name="titlepage" tags="" position="650,100" size="100,100">(text-size:1.5)[
+# (text-style:&quot;shadow&quot;)[The Failure Follies
+🐍]]
+(button: &quot;=X=&quot;)[[Begin|Home]]
+
+
+
+(link:&quot;About the game&quot;)[(display:&quot;About&quot;)]</tw-passagedata><tw-passagedata pid="28" name="About" tags="" position="800,75" size="100,100">## About
+
+The Failure Follies is a Twine game created by (link:&quot;Digital Scholarship at Bryn Mawr College&quot;)[(goto-url:&quot;https://digitalscholarship.blogs.brynmawr.edu/&quot;)] for the (link:&quot;Institute of Failure&quot;)[(goto-url:&quot;https://digitalprojects.brynmawr.edu/failure/&quot;)], 2026.
+(set: $wordmark to &quot;&lt;img src=&#39;https://digbmc.github.io/failure-game/media/IoF-logo.svg&#39; style=&#39;background-color:white;max-width:150px&#39; alt=&#39;Institute of Failure&#39;&gt;&quot;)
+&lt;div&gt;$wordmark&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
