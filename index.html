@@ -69,7 +69,7 @@ tw-link, a {
     font-size: .75em;
   }
 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the failure follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points. 🐍])]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Home" tags="" position="600,250" size="100,100">(if: visits is 1)[(dialog: [Welcome to the Failure Follies! Your goal is to gain 100 points before you get eaten by a giant snake. Compete in a variety of events to win points. 🐍])]
 
 # Welcome!
 
@@ -94,6 +94,8 @@ tw-link, a {
 
 9. [[Basketball]]
 
+(set: $wordmark to &quot;&lt;img src=&#39;https://digbmc.github.io/failure-game/media/iof-dumpster-medium.png&#39; style=&#39;max-width:200px&#39; alt=&#39;Institute of Failure&#39;&gt;&quot;)
+&lt;div&gt;$wordmark&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="2" name="Basketball" tags="" position="600,375" size="100,100"># Basketball
 
 I can tell that you are really good at basketball. Let&#39;s roll the dice to see whether you are able to score any points!
@@ -448,9 +450,8 @@ You failed&quot;)
 }</tw-passagedata><tw-passagedata pid="27" name="titlepage" tags="" position="650,100" size="100,100">(text-size:1.5)[
 # (text-style:&quot;shadow&quot;)[The Failure Follies
 🐍]]
+
 (button: &quot;=X=&quot;)[[Begin|Home]]
-
-
 
 (link:&quot;About the game&quot;)[(display:&quot;About&quot;)]</tw-passagedata><tw-passagedata pid="28" name="About" tags="" position="800,75" size="100,100">## About
 
